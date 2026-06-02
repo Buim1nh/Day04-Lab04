@@ -84,4 +84,25 @@ pytest -q
 - saves the correct JSON artifact
 - gives a concise grounded answer in Vietnamese
 
-Read [guide.md](/Users/duongnh59.al1/Documents/Project/Vin20K/Cohort2/Day-4-Lab/labs_update/guide.md) before editing `src/`.
+Read [guide.md](file:///e:/CongViec/Tài%20liệu%20phỏng%20vấn%20Game%20des/AI20K/Day04/Day04-Lab04/guide.md) trước khi chỉnh sửa `src/`.
+
+---
+
+## 🖥️ Giao diện Kiểm thử Trực quan (Interactive UI Dashboard)
+
+Chúng tôi đã phát triển một giao diện Dashboard cực kỳ hiện đại và trực quan dành riêng cho bài Lab 04 này. Giao diện giúp bạn:
+- **Chọn nhanh**: Click chọn nhanh bất kỳ kịch bản nào trong số 13 test cases có sẵn.
+- **Tùy biến câu hỏi**: Tự viết các truy vấn mua hàng tự do để kiểm chứng Agent.
+- **System Prompt**: Hiển thị chi tiết System Prompt hiện tại của Agent.
+- **Sơ đồ chuỗi gọi tool**: Bản đồ timeline các bước thực thi (list -> detail -> discount -> total -> save) sáng đèn trực quan thời gian thực.
+- **Trace chi tiết**: Phân tích sâu tham số đầu vào (arguments) và kết quả trả về (outputs) của từng công cụ.
+- **Grounded Verification**: Bảng tự động kiểm chứng an toàn dữ liệu, tính tuân thủ quy định hết hàng/mạo danh và tương thích POSIX path.
+
+### 🚀 Cách khởi chạy giao diện:
+
+```bash
+uv run python ui_server.py
+```
+
+Sau khi chạy lệnh trên, bạn hãy mở trình duyệt và truy cập: **[http://127.0.0.1:8888](http://127.0.0.1:8888)**
+

@@ -3,8 +3,16 @@ from __future__ import annotations
 import ast
 import json
 import re
+import sys
 from pathlib import Path
 from typing import Any
+
+if sys.platform.startswith("win"):
+    try:
+        sys.stdout.reconfigure(encoding="utf-8", errors="backslashreplace")
+        sys.stderr.reconfigure(encoding="utf-8", errors="backslashreplace")
+    except Exception:
+        pass
 
 from langchain.agents import create_agent
 from langchain_core.messages import AIMessage, ToolMessage
